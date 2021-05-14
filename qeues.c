@@ -61,6 +61,8 @@ int main() {
 int insert(cola ** start, int data) {
     if(!(*start)) {
         (*start) = (cola *) malloc(sizeof(cola));
+        if(!(*start))
+            return 0;
         (*start)->data = data;
         (*start)->next = NULL;
         return 1;
